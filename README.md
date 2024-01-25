@@ -1,2 +1,0 @@
-# DevdaIusFE
-DevdaIus Frontend Repo

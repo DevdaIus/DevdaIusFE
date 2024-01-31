@@ -1,10 +1,12 @@
+import Node from "../components/node";
+
 const BoardPage = () => {
   return (
     <>
-      <h1>Borad Page</h1>
-      
+      <h1>Board Page</h1>
+      <Node />
     </>
   )
-}
+};
 
 export default BoardPage;

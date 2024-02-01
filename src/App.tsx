@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Route, Router, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
-import BoardPage from './pages/board';
-import MainPage from './pages/main';
-import Root from './pages/root';
-import Main from './pages/main';
+import MainPage from './pages/Main';
+import Root from './pages/Root';
+import Main from './pages/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Board from './pages/Board';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       { index: true, element: <Main /> },
-      { path: "board", element: <BoardPage /> },
+      { path: "board", element: <Board /> },
     ],
   },
 ]);

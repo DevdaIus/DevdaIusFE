@@ -10,9 +10,8 @@ import {
 import BoardPage from "./pages/board";
 
 import Root from "./pages/root";
-import Main from "./pages/Main";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Main from "./pages/main";
+import Header from "./components/header";
 
 const router = createBrowserRouter([
   {

@@ -1,6 +1,6 @@
-import Node from "../components/node";
+import Node from "../components/Node";
 
-const BoardPage = () => {
+const Board = () => {
   return (
     <>
       <h1>Board Page</h1>
@@ -9,4 +9,4 @@ const BoardPage = () => {
   )
 };
 
-export default BoardPage;
+export default Board;

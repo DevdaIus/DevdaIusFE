@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Modal from "./Modal";
+import Modal from "../Modal/Modal";
 
 const Node = () => {
   const [isHovered, setIsHovered] = useState(false);

@@ -1,4 +1,4 @@
-import Node from "../components/Node";
+import Node from "../../components/Node/Node";
 
 const Board = () => {
   return (

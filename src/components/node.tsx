@@ -24,7 +24,7 @@ const Node = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        안녕
+        하이
         {isHovered && (
           <>
             <button className="plusBtn" onClick={showModal}>+</button>

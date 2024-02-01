@@ -3,7 +3,7 @@ import Node from "../components/Node";
 const Board = () => {
   return (
     <>
-      <h1>Board Page</h1>
+      <h1>Board</h1>
       <Node />
     </>
   )

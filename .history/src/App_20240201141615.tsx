@@ -8,18 +8,15 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import BoardPage from "./pages/board";
-
+import MainPage from "./pages/main";
 import Root from "./pages/root";
-import Main from "./pages/Main";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
-      { index: true, element: <Main /> },
+      { index: true, element: <MainPage /> },
       { path: "board", element: <BoardPage /> },
     ],
   },
@@ -28,11 +25,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <Header />
       <main>
         <RouterProvider router={router} />
       </main>
-      <Footer />
+      <footer>Footer</footer>
     </>
   );
 }

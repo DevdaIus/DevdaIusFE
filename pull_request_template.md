@@ -1,11 +1,7 @@
-## 🔥 Related Issues
------
-resolved #issue_number
-
 ## 💜 TodoList
 -----
-- [x] ~ 기능 구현
-- [x] ~ 페이지 구조화 및 스타일링
+- [x] 
+- [x] 
 
 ## ✅ PR Point
 -----

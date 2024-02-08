@@ -1,5 +1,10 @@
 import React from "react";
+import * as S from "./Footer.style";
 
 export default function Footer() {
-  return <div>풋터</div>;
+  return (
+    <S.FooterContainer>
+      <S.CopyRight>&copy;Devdalus Corp.</S.CopyRight>
+    </S.FooterContainer>
+  );
 }

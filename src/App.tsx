@@ -7,6 +7,7 @@ import Main from './pages/Main/Main';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Board from './pages/Board/Board';
+import GlobalStyle from './style/globalStyle';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
+      <GlobalStyle/>
       <Header />
       <main>
         <RouterProvider router={router} />

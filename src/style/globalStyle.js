@@ -143,20 +143,19 @@ export const reset = css`
 `;
 
 export const GlobalStyle = createGlobalStyle`
-${reset}
+  ${reset}
 
-@supports (-webkit-touch-callout: none) { 
-  height: -webkit-fill-available;  //크롬에서안될 상황 대비 ios 노치 대응
-}
+  @supports (-webkit-touch-callout: none) { 
+    height: -webkit-fill-available;  //크롬에서안될 상황 대비 ios 노치 대응
+  }
 
-#root::-webkit-scrollbar {
-  display: none; /* 크롬, 사파리, 오페라, 엣지 */
-}
+  #root::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+  }
 
-* {
-  box-sizing: border-box;
-}
-
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 export default GlobalStyle;

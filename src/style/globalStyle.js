@@ -139,6 +139,7 @@ export const reset = css`
   }
   button {
     cursor: pointer;
+    border: none;
   }
 `;
 

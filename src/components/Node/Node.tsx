@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import * as S from "./Node.style";
 
 const Node = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,23 +19,20 @@ const Node = () => {
   }
 
   return (
-    <>
-      <div
-        className="node"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        하이
-        {isHovered && (
-          <>
-            <button className="plusBtn" onClick={showModal}>+</button>
-            {modalOpen && <Modal setModalOpen={setModalOpen} title='질문 추가' /> }
-            <button className="detailBtn">자세히 보기</button>
-          </>
-        )}
-      </div>
-    </>
-    
+    <S.Wrapper>
+      <S.DetailBtn className={isHovered ? "show" : ""}>자세히</S.DetailBtn>
+      <S.NodeAndAddBtnWrapper> 
+        <S.NodeAddBtn className={isHovered ? "show" : ""} />
+        <S.NodeBox
+          className="node"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          노드            
+        </S.NodeBox>
+        <S.NodeAddBtn className={isHovered ? "show" : ""} />
+      </S.NodeAndAddBtnWrapper>
+    </S.Wrapper>
   )
 };
 

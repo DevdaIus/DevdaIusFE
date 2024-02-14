@@ -9,6 +9,8 @@ export const Wrapper = styled.div`
 
 export const NodeAndAddBtnWrapper = styled.div`
   display: flex;
+  justify-content: center;
+  align-items : center;
 `;
 
 export const NodeBox = styled.div`
@@ -39,7 +41,6 @@ export const DetailBtn = styled.button`
 `;
 
 export const NodeAddBtn = styled(PlusCircleOutlined)`
-  margin-top: 10px;
   cursor: pointer;
   color: ${theme.colors.MainColorB};
   opacity: 0;

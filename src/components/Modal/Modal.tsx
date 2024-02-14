@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import * as S from "./Modal.style";
 
-type Props = {
-  title?: string;
-  setModalOpen: (isOpen: boolean) => void;
-};
+interface Props {
+  open: boolean;
+  onClose: () => void;
+}
 
-const Modal = ({ title, setModalOpen }: Props) => {
+const Modal = ({ open, onClose } : Props) => {
   const closeModal = () => {
-    setModalOpen(false);
+    onClose?.() ;
   };
 
   return (
-    <>
-      <h1>{title}</h1>
-      <button onClick={closeModal}>X</button>
-      <input placeholder='질문 내용을 입력해주세요.'/>
-      <button>확인</button>
-    </>
+    <S.Overlay>
+      <S.ModalWrap>
+        <S.ModalHeader>
+          <S.QuesAddTitle>질문 추가</S.QuesAddTitle>
+          <S.CloseBtn onClick={closeModal} />
+        </S.ModalHeader>
+        <S.QuesInput placeholder='질문을 입력해주세요.'/>
+        <S.ConfirmBtn>확인</S.ConfirmBtn>
+      </S.ModalWrap>
+    </S.Overlay>
   );
 };
 

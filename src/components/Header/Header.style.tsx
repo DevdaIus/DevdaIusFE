@@ -8,9 +8,7 @@ export const HeaderContainer = styled.div`
   padding: 7.5px 40px;
 `;
 
-export const Logo = styled.h1`
-  font-size: 24px;
-`;
+export const Logo = styled.img``;
 
 export const SearchBox = styled.div`
   display: flex;

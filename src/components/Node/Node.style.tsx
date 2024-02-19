@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from './../../style/theme';
-import { PlusCircleOutlined } from "@ant-design/icons";
+import { CloseOutlined, PlusCircleOutlined } from "@ant-design/icons";
 
 export const Wrapper = styled.div`
   display: inline-block;
@@ -34,6 +34,7 @@ export const DetailBtn = styled.button`
   background-color: transparent;
   opacity: 0; /* 초기에는 숨겨진 상태로 설정 */
   transition: opacity 0.3s ease;
+  margin: 3px;
 
   &.show {
     opacity: 1; /* show 클래스가 추가되었을 때 나타남 */
@@ -45,8 +46,27 @@ export const NodeAddBtn = styled(PlusCircleOutlined)`
   color: ${theme.colors.MainColorB};
   opacity: 0;
   transition: opacity 0.3s ease;
+  margin: 5px;
 
   &.show {
     opacity: 1;
   }
+`;
+
+export const NodeDeleteBtn = styled(CloseOutlined)`
+  cursor: pointer;
+  color: ${theme.colors.G2};
+  font-size: 12px;
+`
+
+export const NodeText = styled.p`
+  font-size: 14px;
+  margin-left: 50px;
+  margin-right: 40px;
+`;
+
+export const FlexBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

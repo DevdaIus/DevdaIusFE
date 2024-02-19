@@ -48,7 +48,6 @@ export const QuesAddTitle = styled.p`
 export const CloseBtn = styled(CloseOutlined)`
   cursor: pointer;
   color: ${theme.colors.G4};
-  float: right;
 `;
 
 export const QuesInput = styled.textarea`

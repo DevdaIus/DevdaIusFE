@@ -2,11 +2,13 @@ import { useState } from "react";
 import Modal from "../Modal/Modal";
 import * as S from "./Node.style";
 import MoreModal from "../MoreModal/MoreModal";
+import NodeDeleteModal from "../NodeDeleteModal/NodeDeleteModal";
 
 const Node = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [moreModalOpen, setMoreModalOpen] = useState(false);
+  const [delNodeModalOpen, setDelNodeModalOpen] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -24,6 +26,11 @@ const Node = () => {
     setMoreModalOpen(true);
   }
 
+  const onShowDelModal = () => {
+    setDelNodeModalOpen(true);
+  }
+
+
   return (
     <S.Wrapper 
       onMouseEnter={handleMouseEnter}
@@ -37,7 +44,8 @@ const Node = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          노드            
+          <S.NodeText>노드</S.NodeText>
+          <S.NodeDeleteBtn onClick={onShowDelModal} />            
         </S.NodeBox>
         <S.NodeAddBtn className={isHovered ? "show" : ""} onClick={onShowModal} />
         {modalOpen && (
@@ -50,9 +58,16 @@ const Node = () => {
         )}
         {moreModalOpen && (
           <MoreModal
-            open={modalOpen}
+            open={moreModalOpen}
             onClose={() => {
               setMoreModalOpen(false);
+            }}
+          />
+        )}
+        {delNodeModalOpen && (
+          <NodeDeleteModal
+            onClose={() => {
+              setDelNodeModalOpen(false);
             }}
           />
         )}

@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import * as S from "./NodeDeleteModal.style";
+import useModalOutsideClick from '../../hooks/useModalOutsideClick';
 
 interface Props {
   onClose: () => void;
 }
 
 const NodeDeleteModal = ({ onClose } : Props) => {
+  const modalRef = useRef(null);
   const closeModal = () => {
     onClose?.() ;
   };
 
+  useModalOutsideClick({ ref: modalRef, callback: closeModal });
+
   return (
     <S.Overlay>
-      <S.ModalWrap>
+      <S.ModalWrap ref={modalRef}>
         <S.ModalHeader />
         <S.NodeTextBox>
           <S.NodeText>삭제 하시겠습니까?</S.NodeText>

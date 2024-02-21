@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import * as S from "./Modal.style";
+import useModalOutsideClick from '../../hooks/useModalOutsideClick';
 
 interface Props {
   open: boolean;
@@ -7,13 +8,16 @@ interface Props {
 }
 
 const Modal = ({ open, onClose } : Props) => {
+  const modalRef = useRef(null);
   const closeModal = () => {
     onClose?.() ;
   };
 
+  useModalOutsideClick({ ref: modalRef, callback: closeModal });
+
   return (
     <S.Overlay>
-      <S.ModalWrap>
+      <S.ModalWrap ref={modalRef}>
         <S.ModalHeader>
           <S.QuesAddTitle>질문 추가</S.QuesAddTitle>
           <S.CloseBtn onClick={closeModal} />

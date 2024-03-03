@@ -12,10 +12,19 @@ DevdaIusFE
 | Fix         | 버그 수정에 대한 커밋                                                            |
 | Docs        | 문서를 수정한 경우, 파일 삭제, 파일명 수정 등에 대한 커밋 ex) README.md           |
 | Chore       | 패키지 매니저를 설정하는 경우, 주석 추가 등 자잘한 수정에 관한 커밋                                                                   |
-| code review | 코드 리뷰 반영에 대한 커밋                                                       |
+| Code review | 코드 리뷰 반영에 대한 커밋                                                       |
 
 ---
 
 <br />
 
 
+## 📦 폴더구조
+| pages |
+| component |
+| pages |
+
+```
+📦
+
+```
